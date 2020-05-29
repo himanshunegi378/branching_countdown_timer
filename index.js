@@ -19,7 +19,7 @@ let refreshId = setInterval(() => {
                 appID:'Countdown timer'
                 });
             clearInterval(refreshId)
-            return
+            process.exit()
         }
         iscountdownFinished=false;
         timer(time,()=>{

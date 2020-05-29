@@ -10,26 +10,27 @@ let iscountdownFinished = true
 
 
 let refreshId = setInterval(() => {
-    if(iscountdownFinished){
+    if (iscountdownFinished) {
         let time = conuntdownTimerList.shift()
-        if(time === undefined){
+        if (time === undefined) {
             notifier.notify({
                 title: 'Timer',
                 message: 'All Countdown ended',
-                appID:'Countdown timer'
-                });
+                appID: 'Countdown timer'
+            });
             clearInterval(refreshId)
             return
         }
-        iscountdownFinished=false;
-        timer(time,()=>{
+        iscountdownFinished = false;
+        timer(time, () => {
             console.log(conuntdownTimerList)
             notifier.notify({
                 title: 'Timer',
                 message: 'next task',
-                appID:'Countdown timer'
-                });
-            iscountdownFinished=true})
+                appID: 'Countdown timer'
+            });
+            iscountdownFinished = true
+        })
     }
-    
+
 }, 1000);

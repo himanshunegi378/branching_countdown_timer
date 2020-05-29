@@ -17,7 +17,7 @@ class CountdownTimer {
         console.log(timerList)
     }
     showTimer = () => { }
-    addTimerHorizontally = (time) => {
+    addTimerHorizontally = (index,opts) => {
         const newTimer = new Timer({ time: time });
         this.currentHead.next = newTimer;
         this.currentHead = newTimer;

@@ -1,0 +1,5 @@
+const CountdownTimer =require('./core/dataStructure/countdownTimer')
+const countdownTimer = new CountdownTimer()
+countdownTimer.addTimerHorizontally(10)
+countdownTimer.addTimerHorizontally(20)
+countdownTimer.showWholeTimer()

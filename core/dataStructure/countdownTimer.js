@@ -9,6 +9,7 @@ class CountdownTimer {
 
     startTimer = () => { }
     showWholeTimer = () => {
+
         console.log(JSON.stringify(this.timer))
     }
     showTimer = () => { }
@@ -34,11 +35,23 @@ class CountdownTimer {
                 t = t[i]
             }
             else {
-                t[i] = { timer: new Timer({ message: msg, time: time }) }
+                if (t[i + 1]) {
+                    t[i] = { timer: new Timer({ message: 'system created', time: time }) }
+                    t = t[i]
+                }
+                else {
+                    t[i] = { timer: new Timer({ message: msg, time: time }) }
+
+                }
             }
             iterations++
         }
     }
+
+    start = () => {
+        
+    }
+    
 
 }
 

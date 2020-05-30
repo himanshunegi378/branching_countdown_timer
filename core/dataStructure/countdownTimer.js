@@ -1,29 +1,45 @@
-const Timer =require('./timer')
+const Timer = require('./timer')
 
 class CountdownTimer {
     constructor() {
-        this.initialHead = new Timer({time:0});
+        this.timer = {}
+        this.initialHead = new Timer({ time: 0 });
         this.currentHead = this.initialHead;
     }
 
     startTimer = () => { }
     showWholeTimer = () => {
-        let head = this.initialHead;
-        let timerList = []
-        while (head) {
-            timerList.push(head.time)
-            head = head.next
-        }
-        console.log(timerList)
+        console.log(JSON.stringify(this.timer))
     }
     showTimer = () => { }
-    addTimerHorizontally = (index,opts) => {
-        const newTimer = new Timer({ time: time });
+    addTimerHorizontally = (index, time, msg) => {
+
+        const newTimer = new Timer({ time: time, message: msg });
         this.currentHead.next = newTimer;
         this.currentHead = newTimer;
     }
 
-    addTimerVertically = () => { };
+    addTimerVertically = (index, time, msg) => {
+
+    };
+
+    addTimer = (index, time, msg) => {
+        let length = index.length
+        let iterations = 0;
+        let t = this.timer
+        while (iterations < length) {
+            let i = index.shift()
+
+            if (t[i]) {
+                t = t[i]
+            }
+            else {
+                t[i] = { timer: new Timer({ message: msg, time: time }) }
+            }
+            iterations++
+        }
+    }
+
 }
 
 module.exports = CountdownTimer

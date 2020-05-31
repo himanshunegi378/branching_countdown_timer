@@ -6,7 +6,7 @@ let isActive = false;
 const timer = (time, cb) => {
 
     const currentDate = new Date()
-    const targetDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), currentDate.getHours(), currentDate.getMinutes()+time, currentDate.getSeconds() )
+    const targetDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate(), currentDate.getHours(), currentDate.getMinutes(), currentDate.getSeconds()+time )
 
     // Event dispatched right after the countdown starts
     const onStart = ({ days, hours, minutes, seconds }) => { /* Do whatever you want... */ }

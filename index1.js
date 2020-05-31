@@ -1,7 +1,7 @@
 const CountdownTimer =require('./core/dataStructure/countdownTimer')
 const countdownTimer = new CountdownTimer()
 
-countdownTimer.addTimer([0],0)
+countdownTimer.addTimer([0],6)
 // countdownTimer.addTimer([1],1)
 countdownTimer.addTimer([2],2)
 countdownTimer.addTimer([3],3)
@@ -14,4 +14,15 @@ countdownTimer.addTimer([1,3],13)
 countdownTimer.addTimer([1,1,0],110)
 countdownTimer.addTimer([1,1,1],111)
 countdownTimer.addTimer([1,1,2],112)
-countdownTimer.showWholeTimer()
+// countdownTimer.showWholeTimer()
+// while(true){
+//     let timer = countdownTimer.nextTimer()
+//     if(timer){
+//         console.log(timer)
+        
+//     }
+//     else{
+//         break
+//     }
+// }
+countdownTimer.start()

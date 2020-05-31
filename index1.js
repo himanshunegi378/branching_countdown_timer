@@ -1,4 +1,4 @@
-const CountdownTimer =require('./core/dataStructure/countdownTimer')
+const CountdownTimer =require('./core/dataStructure/timerTree')
 const countdownTimer = new CountdownTimer()
 
 countdownTimer.addTimer([0],6)

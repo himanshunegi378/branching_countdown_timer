@@ -4,6 +4,13 @@ class Timer {
         this.message = options.message || 'No message'
         this.time = options.time || 0  //in minutes
         this.completed = false
+        
+        this.parent = undefined
+        this.child = undefined
+        this.next = undefined
+        this.previous = undefined
+
+
 
     }
 

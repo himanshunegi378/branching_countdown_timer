@@ -12,7 +12,7 @@ class CountdownTimer {
     }
 
     insertTimerToRight = (id, opts) => {
-     
+
         let timer = this.findTimer(id)
         let newTimer = new Timer(opts)
         if (timer.next) {
@@ -31,7 +31,7 @@ class CountdownTimer {
     insertTimerBelow = (id, opts) => {
 
     }
-    
+
 
     findTimer = (targetId) => {
         //assumed this.HEAD is not empty

@@ -16,7 +16,7 @@
     "audio-decode": "^1.4.0",
     "countdown": "^2.6.0",
     "ls-countdown": "^1.2.2",
-    "node-notifier": "^7.0.1",
+    "node-notifier": "^8.0.1",
     "readline-sync": "^1.4.10",
     "webpack": "^4.43.0",
     "webpack-node-externals": "^1.7.2"
